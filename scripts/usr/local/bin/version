@@ -1,0 +1,32 @@
+#!/bin/bash
+# =========================================================================
+# =========================================================================
+#
+#	version
+#	  Print version information
+#
+# =========================================================================
+#
+# @author Jay Wheeler.
+# @version 0.0.1
+# @copyright © 2018. EarthWalk Software.
+# @license Licensed under the Academic Free License version 3.0
+# @package ewsdocker/debian-kaptain
+# @subpackage version
+#
+# =========================================================================
+#
+#	Copyright © 2018. EarthWalk Software
+#	Licensed under the Academic Free License, version 3.0.
+#
+#	Refer to the file named License.txt provided with the source,
+#	or from
+#
+#		http://opensource.org/licenses/academic.php
+#
+# =========================================================================
+# =========================================================================
+
+echo
+echo $(cat /etc/BUILDS/CONTAINER.txt)
+echo
