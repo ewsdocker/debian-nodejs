@@ -21,4 +21,24 @@ NOTE: If the _New Version_ version number is not in the **Tags**, the **latest**
 Other Docker versions (or tags) can be selected on the Docker [Tags](https://hub.docker.com/r/ewsdocker/debian-nodejs/tags/) page.  
 
 An explanation of the [Docker Tags](https://github.com/ewsdocker/debian-nodejs/wiki/DockerTags) is available on the [ewsdocker/debian-nodejs Wiki](https://github.com/ewsdocker/debian-nodejs/wiki).
-____
+____  
+
+**Copyright © 2018. EarthWalk Software.**  
+**Licensed under the GNU General Public License, GPL-3.0-or-later.**  
+
+This file is part of **ewsdocker/debian-eclipse-nodejs**.  
+
+**ewsdocker/debian-eclipse-nodejs** is free software: you can redistribute 
+it and/or modify it under the terms of the GNU General Public License 
+as published by the Free Software Foundation, either version 3 of the 
+License, or (at your option) any later version.  
+
+**ewsdocker/debian-eclipse-nodejs** is distributed in the hope that 
+it will be useful, but WITHOUT ANY WARRANTY; without even the implied 
+warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.  
+
+You should have received a copy of the GNU General Public License
+along with **ewsdocker/debian-eclipse-nodejs**.  If not, see 
+<http://www.gnu.org/licenses/>.  
+____  
