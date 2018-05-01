@@ -1,6 +1,8 @@
 ## ewsdocker/debian-nodejs
-**ewsdocker/debian-nodejs** is a **Debian** docker image containing the latest version of **NODE.js**.  
+**ewsdocker/debian-nodejs** is a **Debian** docker image containing the latest [nodesource/distribution](https://github.com/nodesource/distributions) version of the **Node.js** library.  
+
 ____  
+
 
 ## ewsdocker/debian-nodejs Wiki  
 
@@ -26,19 +28,19 @@ ____
 **Copyright © 2018. EarthWalk Software.**  
 **Licensed under the GNU General Public License, GPL-3.0-or-later.**  
 
-This file is part of **ewsdocker/debian-eclipse-nodejs**.  
+This file is part of **ewsdocker/debian-nodejs**.  
 
-**ewsdocker/debian-eclipse-nodejs** is free software: you can redistribute 
+**ewsdocker/debian-nodejs** is free software: you can redistribute 
 it and/or modify it under the terms of the GNU General Public License 
 as published by the Free Software Foundation, either version 3 of the 
 License, or (at your option) any later version.  
 
-**ewsdocker/debian-eclipse-nodejs** is distributed in the hope that 
+**ewsdocker/debian-nodejs** is distributed in the hope that 
 it will be useful, but WITHOUT ANY WARRANTY; without even the implied 
 warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.  
 
 You should have received a copy of the GNU General Public License
-along with **ewsdocker/debian-eclipse-nodejs**.  If not, see 
+along with **ewsdocker/debian-nodejs**.  If not, see 
 <http://www.gnu.org/licenses/>.  
 ____  

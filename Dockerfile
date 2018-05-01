@@ -9,7 +9,7 @@
 # @author Jay Wheeler.
 # @version 0.0.2
 # @copyright © 2018. EarthWalk Software.
-# @license Licensed under the Academic Free License version 3.0
+# @license Licensed under the GNU General Public License, GPL-3.0-or-later.
 # @package ewsdocker/debian-nodejs
 # @subpackage Dockerfile
 #
@@ -58,8 +58,9 @@ COPY scripts/. /
 
 # =========================================================================
 
-RUN apt-get -y upgrade \
- && curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash - \
+RUN curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash - \
+ && apt-get -y update \ 
+ && apt-get -y upgrade \
  && apt-get -y install \
                nodejs \
                build-essential \
