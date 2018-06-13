@@ -1,10 +1,9 @@
 #!/bin/bash
-
 # =========================================================================
 # =========================================================================
 #
-#	version
-#	  Print version information
+#	debian-nodejs
+#	  docker run command for debian-nodejs
 #
 # =========================================================================
 #
@@ -12,8 +11,8 @@
 # @version 0.0.1
 # @copyright © 2018. EarthWalk Software.
 # @license Licensed under the GNU General Public License, GPL-3.0-or-later.
-# @package ewsdocker/debian-nodejs
-# @subpackage version
+# @package debian-nodejs
+# @subpackage debian-nodejs
 #
 # =========================================================================
 #
@@ -37,16 +36,9 @@
 #   <http://www.gnu.org/licenses/>.
 #
 # =========================================================================
-# =========================================================================
 
-lines=()
-mapfile -t lines < /etc/ewsdocker-builds.txt
-
-echo
-
-for line in "${lines[@]}"
-do
-  echo ${line}
-done
-
-echo
+docker run -v /etc/localtime:/etc/localtime:ro \
+           -v ${HOME}/.config/docker/debian-nodejs:/root \
+           -v ${HOME}:/user \
+           --name=debian-nodejs-0.0.2 \
+       ewsdocker/debian-nodejs:0.0.2

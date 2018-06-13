@@ -36,7 +36,7 @@
 #
 # =========================================================================
 # =========================================================================
-FROM ewsdocker/debian-base:3.0.5
+FROM ewsdocker/debian-base:3.0.8
 
 MAINTAINER Jay Wheeler <EarthWalkSoftware@gmail.com>
 
@@ -54,10 +54,6 @@ ENV PKG_HOST=https://deb.nodesource.com \
 
 # =========================================================================
 
-COPY scripts/. / 
-
-# =========================================================================
-
 RUN curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash - \
  && apt-get -y update \ 
  && apt-get -y upgrade \
@@ -66,6 +62,13 @@ RUN curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash - \
                build-essential \
  && apt-get clean all \
  && printf "${LMSBUILD_DOCKER} (${LMSBUILD_PACKAGE}), %s @ %s\n" `date '+%Y-%m-%d'` `date '+%H:%M:%S'` >> /etc/ewsdocker-builds.txt 
+
+# =========================================================================
+
+COPY scripts/. /
+
+RUN chmod 775 /usr/local/bin/* \
+ && chmod 600 /usr/local/share/applications/debian-nodejs.desktop 
 
 # =========================================================================
 
