@@ -16,11 +16,11 @@ ____
 Find out all that you need to know about the docker Tags, and the version of **ewsdocker/debian-nodejs** represented, at [Docker Tags](https://github.com/ewsdocker/debian-nodejs/wiki/DockerTags).  
 _____________________  
 
-**docker pull** will pull the **latest** image by default.  This image is based on the GitHub **master** source, which is the development version, and quite possibly **unstable**.  
+**docker pull** will pull the **latest** image by default.  
 
-The **stable** version is the most stable version of the most recent **Debian** version.  It may (most likely) not be the newest GitHub version.  
+The **edge** image is based on the GitHub **master** source, which is the development version, and quite possibly **unstable**.  
 
-NOTE: If the _New Version_ version number is not in the **Tags**, the **latest** tag is still under test.  Testing will be complete when the _New Version_ tag exists.
+NOTE: If the _New Version_ version number is not in the **Tags**, the **edge** tag is still under test.  Testing will be complete when the _New Version_ tag exists, and the **edge** tag for the _New Version_ does not exist.
 
 Other Docker versions (or tags) can be selected on the Docker [Tags](https://hub.docker.com/r/ewsdocker/debian-nodejs/tags/) page.  
 

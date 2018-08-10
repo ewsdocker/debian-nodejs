@@ -7,7 +7,7 @@
 # =========================================================================
 #
 # @author Jay Wheeler.
-# @version 0.0.3
+# @version 9.5.3
 # @copyright © 2018. EarthWalk Software.
 # @license Licensed under the GNU General Public License, GPL-3.0-or-later.
 # @package ewsdocker/debian-nodejs
@@ -36,7 +36,7 @@
 #
 # =========================================================================
 # =========================================================================
-FROM ewsdocker/debian-base:3.0.9
+FROM ewsdocker/debian-base:9.5.0
 
 MAINTAINER Jay Wheeler <EarthWalkSoftware@gmail.com>
 
@@ -48,9 +48,15 @@ ENV PKG_VER=9
 ENV PKG_HOST=https://deb.nodesource.com \
     PKG_DIR="node.js" \
     PKG_NAME="setup_${PKG_VER}.x" \
-    PKG_URL=${PKG_HOST}/${PKG_NAME} \
-    LMSBUILD_DOCKER="ewsdocker/debian-nodejs:0.0.3" \ 
-    LMSBUILD_PACKAGE="node.js v. ${PKG_VER}.x"
+    PKG_URL=${PKG_HOST}/${PKG_NAME}  
+
+ENV LMSBUILD_VERSION="9.5.3"  
+ENV LMSBUILD_NAME=debian-nodejs  
+ENV LMSBUILD_REPO=ewsdocker  
+ENV LMSBUILD_REGISTRY=""  
+
+ENV LMSBUILD_DOCKER="${LMSBUILD_REPO}/${LMSBUILD_NAME}:${LMSBUILD_VERSION}" 
+ENV LMSBUILD_PACKAGE="node.js v. ${PKG_VER}.x"
 
 # =========================================================================
 
@@ -68,7 +74,7 @@ RUN curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash - \
 COPY scripts/. /
 
 RUN chmod 775 /usr/local/bin/* \
- && chmod 600 /usr/local/share/applications/debian-nodejs.desktop 
+ && chmod 600 /usr/local/share/applications/${LMSBUILD_NAME}-${LMSBUILD_VERSION}.desktop 
 
 # =========================================================================
 
