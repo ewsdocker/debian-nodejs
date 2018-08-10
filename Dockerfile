@@ -7,7 +7,7 @@
 # =========================================================================
 #
 # @author Jay Wheeler.
-# @version 9.5.3
+# @version 9.5.4
 # @copyright © 2018. EarthWalk Software.
 # @license Licensed under the GNU General Public License, GPL-3.0-or-later.
 # @package ewsdocker/debian-nodejs
@@ -36,7 +36,7 @@
 #
 # =========================================================================
 # =========================================================================
-FROM ewsdocker/debian-base:9.5.0
+FROM ewsdocker/debian-base-gui:9.5.1
 
 MAINTAINER Jay Wheeler <EarthWalkSoftware@gmail.com>
 
@@ -50,7 +50,7 @@ ENV PKG_HOST=https://deb.nodesource.com \
     PKG_NAME="setup_${PKG_VER}.x" \
     PKG_URL=${PKG_HOST}/${PKG_NAME}  
 
-ENV LMSBUILD_VERSION="9.5.3"  
+ENV LMSBUILD_VERSION="9.5.4"  
 ENV LMSBUILD_NAME=debian-nodejs  
 ENV LMSBUILD_REPO=ewsdocker  
 ENV LMSBUILD_REGISTRY=""  
