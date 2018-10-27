@@ -1,31 +1,62 @@
-## ewsdocker/debian-nodejs:9.5.4  
-
+## ewsdocker/debian-nodejs:9.5.5  
 **ewsdocker/debian-nodejs** is a **Debian** docker image containing the latest [nodesource/distributions](https://github.com/nodesource/distributions) version of the [Node.js](https://nodejs.org/) library.  
 
-A pre-built [ewsdocker/debian-nodejs](https://hub.docker.com/r/ewsdocker/debian-nodejs/) image is available on [Docker Hub](https://hub.docker.com/) from [ewsdocker/debian-nodejs](https://hub.docker.com/r/ewsdocker/debian-nodejs/).  
+____  
+**Pre-built Docker images are available from [ewsdocker/debian-nodejs](https://hub.docker.com/r/ewsdocker/debian-nodejs).**  
 
 ____  
 
-
-## ewsdocker/debian-nodejs Wiki  
-
-Please visit our [ewsdocker/debian-nodejs Wiki](https://github.com/ewsdocker/debian-nodejs/wiki) for complete documentation of this docker image.  
+**NOTE: ewsdocker/debian-nodejs** is designed to be used on a Linux system configured to support **Docker** _user namespaces_.  Refer to [ewsdocker Containers and Docker User Namespaces](https://github.com/ewsdocker/ewsdocker.github.io/wiki/UserNS-Overview) for an overview and additional information.  
 ____  
 
-### About Docker Versions  
+**Visit [ewsdocker/debian-nodejs Wiki](https://github.com/ewsdocker/debian-nodejs/wiki) for complete documentation of this docker image.**  
+____  
 
-Find out all that you need to know about the docker Tags, and the version of **ewsdocker/debian-nodejs** represented, at [Docker Tags](https://github.com/ewsdocker/debian-nodejs/wiki/DockerTags).  
-_____________________  
+#### Installing ewsdocker/debian-nodejs  
+The following scripts will download the selected **ewsdocker/debian-nodejs** image, create a container, setup and populate the directory structures, and create the run-time scripts.  
 
-**docker pull** will pull the **latest** image by default.  
+The <i>default</i> values will install all directories and contents in the <b>docker host</b> user's home directory (refer to <a href="#mapping">Mapping docker host resources to the docker container</a>, below).  
 
-The **edge** image is based on the GitHub **master** source, which is the development version, and quite possibly **unstable**.  
+____  
 
-NOTE: If the _New Version_ version number is not in the **Tags**, the **edge** tag is still under test.  Testing will be complete when the _New Version_ tag exists, and the **edge** tag for the _New Version_ does not exist.
+**ewsdocker/debian-nodejs:9.5.5**
+  
+    docker run --rm \
+               -v ${HOME}/bin:/userbin \
+               -v ${HOME}/.local:/usrlocal \
+               -e LMS_BASE="${HOME}/.local" \
+               -v ${HOME}/.config/docker:/conf \
+               -v ${HOME}/.config/docker/debian-nodejs-9.5.5:/root \
+               --name=debian-nodejs-9.5.5\
+           ewsdocker/debian-nodejs:9.5.5 lms-setup  
 
-Other Docker versions (or tags) can be selected on the Docker [Tags](https://hub.docker.com/r/ewsdocker/debian-nodejs/tags/) page.  
+____  
 
-An explanation of the [Docker Tags](https://github.com/ewsdocker/debian-nodejs/wiki/DockerTags) is available on the [ewsdocker/debian-nodejs Wiki](https://github.com/ewsdocker/debian-nodejs/wiki).
+#### Running the installed scripts
+
+After running the above command script, and using the settings indicated, the docker host directories, mapped as shown in the above tables, will be configured as follows:
+
+ - the executable scripts have been copied to **~/bin**;  
+ - the associated **debian-nodejs-"version"** executable script (shown below) will be found in **~/.local/bin**, and _should_ be customized with proper local volume names;  
+
+____  
+
+**Execution scripts**  
+
+**ewsdocker/debian-nodejs:9.5.5**  
+  
+    docker run -it \
+               --rm \
+               -v /etc/localtime:/etc/localtime:ro \
+               -v ${HOME}/workspace/debian/nodejs/9.5.5:/workspace \
+               -v ${HOME}/.config/docker/debian-nodejs-9.5.5:/root \
+               --name=debian-nodejs-9.5.5\
+           ewsdocker/debian-nodejs:9.5.5 /bin/bash
+
+____  
+
+Refer to the **[Command-line Interface](https://github.com/ewsdocker/debian-nodejs/wiki/CommandLineInterface) Wiki** page for details about how to connect to this container.
+
 ____  
 
 **Copyright © 2018. EarthWalk Software.**  
