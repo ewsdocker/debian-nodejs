@@ -8,15 +8,15 @@
 # =========================================================================
 #
 # @author Jay Wheeler.
-# @version 9.5.5
-# @copyright © 2018. EarthWalk Software.
+# @version 9.6.0
+# @copyright © 2018, 2019. EarthWalk Software.
 # @license Licensed under the GNU General Public License, GPL-3.0-or-later.
 # @package debian-nodejs
 # @subpackage debian-nodejs
 #
 # =========================================================================
 #
-#	Copyright © 2018. EarthWalk Software
+#	Copyright © 2018, 2019. EarthWalk Software
 #	Licensed under the GNU General Public License, GPL-3.0-or-later.
 #
 #   This file is part of ewsdocker/debian-nodejs.
@@ -40,7 +40,7 @@
 docker run -it \
            --rm \
            -v /etc/localtime:/etc/localtime:ro \
-           -v ${HOME}/workspace/debian/nodejs/9.5.5:/workspace \
-           -v ${HOME}/.config/docker/debian-nodejs-9.5.5:/root \
-           --name=debian-nodejs-9.5.5\
-       ewsdocker/debian-nodejs:9.5.5 /bin/bash
+           -v ${HOME}/.config/docker/debian-nodejs-9.6.0:/root \
+           -v ${HOME}/.config/docker/debian-nodejs-9.6.0/workspace:/workspace \
+           --name=debian-nodejs-9.6.0\
+       ewsdocker/debian-nodejs:9.6.0 /bin/bash

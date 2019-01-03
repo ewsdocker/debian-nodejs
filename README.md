@@ -1,4 +1,4 @@
-## ewsdocker/debian-nodejs:9.5.5  
+## ewsdocker/debian-nodejs:9.6.0  
 **ewsdocker/debian-nodejs** is a **Debian** docker image containing the latest [nodesource/distributions](https://github.com/nodesource/distributions) version of the [Node.js](https://nodejs.org/) library.  
 
 ____  
@@ -19,16 +19,16 @@ The <i>default</i> values will install all directories and contents in the <b>do
 
 ____  
 
-**ewsdocker/debian-nodejs:9.5.5**
+**ewsdocker/debian-nodejs:9.6.0**
   
     docker run --rm \
                -v ${HOME}/bin:/userbin \
                -v ${HOME}/.local:/usrlocal \
                -e LMS_BASE="${HOME}/.local" \
                -v ${HOME}/.config/docker:/conf \
-               -v ${HOME}/.config/docker/debian-nodejs-9.5.5:/root \
-               --name=debian-nodejs-9.5.5\
-           ewsdocker/debian-nodejs:9.5.5 lms-setup  
+               -v ${HOME}/.config/docker/debian-nodejs-9.6.0:/root \
+               --name=debian-nodejs-9.6.0\
+           ewsdocker/debian-nodejs:9.6.0 lms-setup  
 
 ____  
 
@@ -43,15 +43,15 @@ ____
 
 **Execution scripts**  
 
-**ewsdocker/debian-nodejs:9.5.5**  
+**ewsdocker/debian-nodejs:9.6.0**  
   
     docker run -it \
                --rm \
                -v /etc/localtime:/etc/localtime:ro \
-               -v ${HOME}/workspace/debian/nodejs/9.5.5:/workspace \
-               -v ${HOME}/.config/docker/debian-nodejs-9.5.5:/root \
-               --name=debian-nodejs-9.5.5\
-           ewsdocker/debian-nodejs:9.5.5 /bin/bash
+               -v ${HOME}/workspace/debian/nodejs/9.6.0:/workspace \
+               -v ${HOME}/.config/docker/debian-nodejs-9.6.0:/root \
+               --name=debian-nodejs-9.6.0\
+           ewsdocker/debian-nodejs:9.6.0 /bin/bash
 
 ____  
 
@@ -59,7 +59,7 @@ Refer to the **[Command-line Interface](https://github.com/ewsdocker/debian-node
 
 ____  
 
-**Copyright © 2018. EarthWalk Software.**  
+**Copyright © 2018, 2019. EarthWalk Software.**  
 **Licensed under the GNU General Public License, GPL-3.0-or-later.**  
 
 This file is part of **ewsdocker/debian-nodejs**.  
