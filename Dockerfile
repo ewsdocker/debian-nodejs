@@ -46,7 +46,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 ENV PKG_VER=10
 ENV PKG_HOST=https://deb.nodesource.com \
-    PKG_DIR="node.js" \
+    PKG_DIR="NodeJS" \
     PKG_NAME="setup_${PKG_VER}.x" \
     PKG_URL=${PKG_HOST}/${PKG_NAME}  
 
